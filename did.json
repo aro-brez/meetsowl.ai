@@ -48,14 +48,6 @@
   ],
   "_metadata": {
     "created": "2026-04-23T00:00:00Z",
-    "version": "v1-sovereign-sprint",
-    "patent_claim": "V5 Claim 5 — Cryptographically Anchored Sovereign Identity",
-    "publication_target": "https://meetsowl.ai/.well-known/did.json",
-    "publication_status": "READY — multibase filled",
-    "next_steps": [
-      "Run tools/sowl_did_publish.py to compute multibase pubkey and fill REPLACE placeholder",
-      "Upload to meetsowl.ai/.well-known/did.json (Tailscale or VPS)",
-      "Verify resolution via universal-resolver.io/did/did:web:meetsowl.ai:sowl"
-    ]
+    "version": "v1"
   }
 }
