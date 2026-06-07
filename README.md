@@ -1,4 +1,4 @@
-# 🦉 Meet Sowl
+# 🦉 MeetSowl.ai
 
 > **Siri & Gemini's unshipped promise — a post-computing voice companion that remembers, evolves, builds. You speak, Sowl acts.**
 
@@ -98,6 +98,8 @@ That is Sowl:
 ## Team
 
 **Aaron Nosbisch** · WHO AI LLC · [meetsowl.ai](https://meetsowl.ai)
+
+**Advisor:** Ayush Ojha · ayushoizha@gmail.com
 
 ---
 
