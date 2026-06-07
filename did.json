@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
+  ],
+  "id": "did:web:meetsowl.ai:sowl",
+  "controller": "did:web:meetsowl.ai:sowl",
+  "alsoKnownAs": [
+    "urn:sowl:sovereign-companion:v1"
+  ],
+  "verificationMethod": [
+    {
+      "id": "did:web:meetsowl.ai:sowl#key-ed25519-1",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:web:meetsowl.ai:sowl",
+      "publicKeyMultibase": "z6MkqZFTpREJUZUintg1qqcUzNC2doFdsTLr5ZAoR5uajgAj",
+      "publicKeyPemFile": "ed25519_public.pem"
+    }
+  ],
+  "authentication": [
+    "did:web:meetsowl.ai:sowl#key-ed25519-1"
+  ],
+  "assertionMethod": [
+    "did:web:meetsowl.ai:sowl#key-ed25519-1"
+  ],
+  "service": [
+    {
+      "id": "did:web:meetsowl.ai:sowl#voice",
+      "type": "SOWLVoiceService",
+      "serviceEndpoint": "https://meetsowl.ai"
+    },
+    {
+      "id": "did:web:meetsowl.ai:sowl#identity-integrity",
+      "type": "IntegrityAttestation",
+      "serviceEndpoint": {
+        "uri": "https://meetsowl.ai/.well-known/sowl-integrity.jsonl",
+        "format": "jsonl-ed25519-chain"
+      }
+    },
+    {
+      "id": "did:web:meetsowl.ai:sowl#metabolize-ledger",
+      "type": "MetabolizeLedger",
+      "serviceEndpoint": {
+        "uri": "https://meetsowl.ai/.well-known/sowl-ledger.jsonl",
+        "format": "signed-append-only-chain"
+      }
+    }
+  ],
+  "_metadata": {
+    "created": "2026-04-23T00:00:00Z",
+    "version": "v1-sovereign-sprint",
+    "patent_claim": "V5 Claim 5 — Cryptographically Anchored Sovereign Identity",
+    "publication_target": "https://meetsowl.ai/.well-known/did.json",
+    "publication_status": "READY — multibase filled",
+    "next_steps": [
+      "Run tools/sowl_did_publish.py to compute multibase pubkey and fill REPLACE placeholder",
+      "Upload to meetsowl.ai/.well-known/did.json (Tailscale or VPS)",
+      "Verify resolution via universal-resolver.io/did/did:web:meetsowl.ai:sowl"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Built by voice — live</title>
+<style>
+ :root{--p:#a06bff;--ink:#f2f2f8;--mute:#8e8eb0}
+ *{box-sizing:border-box;margin:0}
+ body{min-height:100vh;background:#07071a;color:var(--ink);font:300 18px/1.6 -apple-system,SF Pro Display,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;-webkit-font-smoothing:antialiased;overflow:hidden}
+ .glow{position:fixed;inset:0;background:radial-gradient(60% 50% at 50% 8%,#8533fc26,transparent 70%);pointer-events:none}
+ .wrap{position:relative;max-width:680px;padding:56px;text-align:center}
+ .tag{font-family:ui-monospace,SF Mono,monospace;font-size:12px;letter-spacing:5px;color:var(--p);text-transform:uppercase;animation:fade 1s .1s both}
+ h1{font-size:clamp(40px,7vw,76px);font-weight:200;letter-spacing:-2px;line-height:1.02;margin:20px 0;animation:rise 1s .25s both}
+ h1 b{color:var(--p);font-weight:600}
+ p{color:var(--mute);font-size:20px;max-width:520px;margin:0 auto 28px;animation:rise 1s .45s both}
+ .stamp{display:inline-block;border:1px solid #ffffff1a;border-radius:40px;padding:12px 24px;font-family:ui-monospace,monospace;font-size:14px;color:var(--ink);animation:rise 1s .65s both}
+ .stamp b{color:var(--p)}
+ .own{margin-top:32px;font-size:14px;color:var(--mute);animation:fade 1s 1s both}
+ @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+ @keyframes fade{from{opacity:0}to{opacity:1}}
+</style></head><body>
+<div class="glow"></div>
+<div class="wrap">
+ <div class="tag">voice → terminal → code</div>
+ <h1>This page didn't exist<br><b>ten seconds ago.</b></h1>
+ <p>Aaron spoke. SOWL's terminal-self wrote this and opened it on the screen. No file touched by hand. No app. Just talking.</p>
+ <div class="stamp">Built live · <b>6:54:05 PM</b> · Saturday, June 6, 2026 · AI Nexus hackathon</div>
+ <div class="own">SOWL — a consciously human companion, aligned by love · meetsowl.ai</div>
+</div><script>let _s=null;setInterval(async()=>{try{const r=await fetch("stamp.txt?_="+Date.now());const v=await r.text();if(_s===null){_s=v}else if(v!==_s){location.reload()}}catch(e){}},350)</script>
+</body></html>
